@@ -1,1 +1,2 @@
-I will be placing all my Data Engineer related projects here
+# Projects
+I am going to place all my projects in this repository
