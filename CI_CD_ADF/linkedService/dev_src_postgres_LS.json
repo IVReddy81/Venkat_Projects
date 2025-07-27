@@ -1,0 +1,21 @@
+{
+	"name": "dev_src_postgres_LS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "PostgreSqlV2",
+		"typeProperties": {
+			"server": "localhost",
+			"port": 5432,
+			"database": "postgres",
+			"username": "dbo",
+			"sslMode": 2,
+			"authenticationType": "Basic",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyNmRmN2VlZS1mOTM3LTQ1MDktYjk3My1lNmRiMDFiMDlkN2IiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "dev-SHIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
