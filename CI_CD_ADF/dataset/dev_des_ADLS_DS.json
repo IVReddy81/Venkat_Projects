@@ -1,0 +1,38 @@
+{
+	"name": "dev_des_ADLS_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dev_des_ADLS_LS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"table": {
+				"type": "string"
+			},
+			"schema": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(dataset().schema,'.',dataset().table,'_',string(formatDateTime(addHours(utcNow(),-6),'dd')),'_',string(formatDateTime(addHours(utcNow(),-6),'hh')),'_',string(formatDateTime(addHours(utcNow(),-6),'mm')),'.csv')",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().table",
+					"type": "Expression"
+				},
+				"fileSystem": "dev"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
