@@ -1,0 +1,19 @@
+CI-CD using ADF
+1.	Create Pipeline in DEV factory
+2.	Go to Manage -> ARM template -> Export
+a.	It will download as zip file
+b.	Unzip everything
+3.	Go to “Custom deployment”
+a.	Click on “Build your own template in the editor”
+b.	Click on “Load File”
+c.	Select “ARMTemplateForFactory.json” file
+d.	Change parameter names according to env
+i.	After loading all the parameters come as dev_
+ii.	Use replace to modify dev_ to prd_ 
+e.	Enter all the parameter values
+i.	Resource Group
+ii.	Data Factory Name
+iii.	Storage Account End point name
+iv.	Access key
+** If you are using SHIR, make sure Integration Runtime is up and running**
+	
